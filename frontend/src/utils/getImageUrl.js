@@ -1,11 +1,3 @@
-// Works in both dev (Vite/Electron) and production
-// Now supports Base64 images sent directly from the backend
-
-export default function getImageUrl(path) {
-  if (!path) {
-    // Optional: placeholder image as Base64 string
-    return "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA..."; 
-  }
-  // If path is already a URL or Base64 string, just return it
-  return path;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8170fee41c3e70c636abbc42497f494f927324c522bc7a9b5315cfef99394b6b
+size 409

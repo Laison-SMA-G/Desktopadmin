@@ -1,10 +1,3 @@
-import mongoose from "mongoose";
-
-const saleSchema = new mongoose.Schema({
-  productId: { type: String, required: false },
-  quantity: { type: Number, default: 1 },
-  amount: { type: Number, required: true },
-  createdAt: { type: Date, default: Date.now },
-});
-
-export default mongoose.model("Sale", saleSchema);
+version https://git-lfs.github.com/spec/v1
+oid sha256:bee49177c54f6cc67d594fda66facc34e0837fd6339418e434ad38e0e769ec81
+size 313

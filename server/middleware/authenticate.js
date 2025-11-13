@@ -1,16 +1,3 @@
-import jwt from 'jsonwebtoken';
-
-export default function(req, res, next){
-  const auth = req.headers.authorization;
-  if (!auth) return res.status(401).json({ error: 'missing token' });
-  const parts = auth.split(' ');
-  if (parts.length !== 2 || parts[0] !== 'Bearer') return res.status(401).json({ error: 'invalid token format' });
-  const token = parts[1];
-  try{
-    const data = jwt.verify(token, process.env.JWT_SECRET || 'pcrexsecret');
-    req.user = data;
-    next();
-  }catch(err){
-    return res.status(401).json({ error: 'invalid token' });
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c33e3654674834e37d1e20cffbd735070d93c3423ef5338e65c9c8cf061a3531
+size 559

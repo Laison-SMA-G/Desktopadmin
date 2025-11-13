@@ -1,14 +1,3 @@
-// server/models/Customer.js
-import mongoose from "mongoose";
-
-const customerSchema = new mongoose.Schema(
-  {
-    name: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
-    profilePicture: { type: String, default: null },
-    password: { type: String, required: true }, // optional if you store hashed passwords
-  },
-  { timestamps: true }
-);
-
-export default mongoose.model("Customer", customerSchema);
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d67b448d08f47588fe0bd06000ec0b41b74ea88fbb814f63cc77f034a42faf9
+size 462

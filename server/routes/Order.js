@@ -1,19 +1,3 @@
-import express from "express";
-import Order from "../models/Order.js";
-
-const router = express.Router();
-
-// Update order status
-router.put("/:id/status", async (req, res) => {
-  const { status } = req.body;
-  try {
-    const order = await Order.findByIdAndUpdate(req.params.id, { status }, { new: true });
-    if (!order) return res.status(404).json({ error: "Order not found" });
-    res.json(order);
-  } catch (err) {
-    console.error("Failed to update order status:", err);
-    res.status(500).json({ error: "Failed to update order status" });
-  }
-});
-
-export default router;
+version https://git-lfs.github.com/spec/v1
+oid sha256:d4c93e9f22333bfde32389561d9657aaf306df1fa38eff03172b7e0333e111b7
+size 600

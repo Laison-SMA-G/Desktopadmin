@@ -1,29 +1,3 @@
-import mongoose from "mongoose";
-
-const orderSchema = new mongoose.Schema(
-  {
-    customerId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-      required: true,
-    },
-    items: [
-      {
-        productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
-        name: String,
-        price: Number,
-        quantity: Number,
-      },
-    ],
-    total: { type: Number, required: true },
-    status: {
-      type: String,
-      enum: ["Pending", "Processing", "Shipped", "Completed", "Cancelled"],
-      default: "Pending",
-    },
-    orderDate: { type: Date, default: Date.now },
-  },
-  { timestamps: true }
-);
-
-export default mongoose.model("Order", orderSchema);
+version https://git-lfs.github.com/spec/v1
+oid sha256:0334c12bd3990d48c5c1c420b703d5d2c699c51bc25089cc30f8d09cfbbcb5be
+size 726

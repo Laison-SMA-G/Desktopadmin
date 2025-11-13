@@ -1,14 +1,3 @@
-import mongoose from "mongoose";
-
-const userSchema = new mongoose.Schema(
-  {
-    name: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
-    profilePicture: { type: String },
-    role: { type: String, enum: ["user", "admin"], default: "user" },
-  },
-  { timestamps: true }
-);
-
-export default mongoose.model("User", userSchema);
+version https://git-lfs.github.com/spec/v1
+oid sha256:e28515c68e1f4153c5bd2c8fd0ff3472bbd4ff6e0ed0e4c4b47e7eebc8f1ee0b
+size 434
